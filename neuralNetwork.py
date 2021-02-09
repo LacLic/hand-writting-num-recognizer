@@ -151,7 +151,7 @@ with open('test.csv', 'r') as test_data_file:
 # from test.csv
 test = test_data_list[0]
 test_values = test.split(',')
-test_inputs = (numpy.asfarray(test_values)/255.0 * 0.99) + 0.1
+test_inputs = (numpy.asfarray(test_values)/255.0 * 0.99) + 0.01
 print(network.query(test_inputs))
 # print(test_data_list[0].strip().split(','))
 
@@ -159,5 +159,5 @@ print(network.query(test_inputs))
 test = data_list[999]
 print('Answer is', test[0])
 test_values = test.split(',')
-test_inputs = (numpy.asfarray(test_values[1:])/255.0 * 0.99) + 0.1
+test_inputs = (numpy.asfarray(test_values[1:])/255.0 * 0.99) + 0.01
 print(network.query(test_inputs))
